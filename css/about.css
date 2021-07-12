@@ -1,0 +1,319 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    /*1rem = 10px*/
+}
+
+body {
+    margin: 0 auto;
+    text-align: center;
+    font-family: "monterrat-regular";
+    line-height: 2;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+p {
+    font-size: 2rem;
+    margin: 0;
+}
+
+@font-face {
+    src: url(../fonts/Montserrat-Black.otf);
+    font-family: "montserrat-black";
+}
+
+@font-face {
+    src: url(../fonts/Montserrat-Regular.otf);
+    font-family: "monterrat-regular";
+}
+
+@font-face {
+    src: url(../fonts/Montserrat-Light.otf);
+    font-family: "monterrat-light";
+}
+
+
+/*header*/
+
+header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px 0px;
+    width: 100%;
+}
+
+header .container a {
+    text-decoration: none;
+    color: black;
+}
+
+header .container a img {
+    margin-right: 10px;
+}
+
+header .container>a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*centers the logo and the text in header*/
+}
+
+header .container>a span {
+    font-family: "monterrat-regular";
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    margin: 10px auto;
+}
+
+
+/*Nav*/
+
+header .container nav {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+header .container nav a {
+    font-family: "monterrat-light";
+    font-size: 2rem;
+    margin: 10px 5px;
+}
+
+
+/*About-us section*/
+
+#about-section .container {
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    background-position-x: 30%;
+    padding: 20px;
+}
+
+#booking-form {
+    background-color: rgba(0, 0, 0, 0.37);
+    width: 100%;
+    border-radius: 5px;
+    margin: 0px auto;
+    padding: 1px;
+}
+
+legend {
+    font-size: 3rem;
+    color: white;
+    font-family: "monterrat-light";
+    margin: 30px auto;
+}
+
+.input-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+input {
+    width: 80%;
+    margin: 5px;
+    padding-left: 20px;
+    height: 45px;
+    border-radius: 5px;
+    border: none;
+}
+
+ ::placeholder {
+    color: rgba(0, 0, 0, 0.37);
+}
+
+.checkbox-container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.checkbox-container p,
+.checkbox-container a {
+    color: white;
+    font-size: 1.5rem;
+    font-family: "monterrat-light";
+}
+
+input[type="checkbox"] {
+    width: initial;
+    height: initial;
+}
+
+button {
+    display: block;
+    color: white;
+    background-color: red;
+    border-style: none;
+    border-radius: 5px;
+    font-family: "monterrat-regular";
+    font-size: 2rem;
+    text-transform: uppercase;
+    width: 250px;
+    padding: 20px;
+    margin: 10px auto;
+}
+
+
+/*Section Guaranteed*/
+
+#guaranteed {
+    background-color: #f1d13d;
+}
+
+#guaranteed .container {
+    width: 90%;
+    padding: 50px;
+    margin: 0 auto;
+}
+
+
+/*Section Easiest*/
+
+#easiest .container {
+    width: 90%;
+    padding: 50px;
+    margin: 0 auto;
+}
+
+
+/*FOOTER*/
+
+footer {
+    background-color: #212121;
+}
+
+footer .container {
+    width: 90%;
+    padding: 50px;
+    margin: 0 auto;
+}
+
+footer .container>a span {
+    color: rgba(255, 255, 255, 0.507);
+    text-transform: uppercase;
+    font-family: "monterrat-regular";
+}
+
+footer .container a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+footer .container li {
+    color: white;
+    font-size: 2rem;
+}
+
+
+/*Tablet min-width=768px*/
+
+@media screen and (min-width: 768px) {
+    footer .container {
+        display: flex;
+        justify-content: space-around;
+    }
+    footer .container ul {
+        display: flex;
+        justify-content: space-around;
+    }
+    li {
+        margin-left: 30px;
+    }
+}
+
+
+/*Desktop min-width=1025*/
+
+@media screen and ( min-width: 1025px) {
+
+    h2 {
+        font-size: 2rem;
+    }
+    
+    p {
+        font-size: 1.2rem;
+        color: rgb(95, 95, 95);
+    }
+
+    /*header*/
+
+    header .container,
+    header .container>a,
+    header .container nav {
+        flex-direction: row;
+    }
+    header .container {
+        justify-content: space-around;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    header .container nav {
+        justify-content: flex-end;
+    }
+    header .container nav a:hover {
+        padding: 5px;
+        width: 100px;
+        border-radius: 5px;
+        color: white;
+        background-color: #ff9d00;
+        transition: all 0.3s linear 0s
+    }
+
+    /*About us Section*/
+
+    #about-section .container {
+        max-width: 100%;
+    }
+
+    #about-us h2 {
+        border-bottom: 1px solid rgb(190, 190, 190);
+        padding: 20px;
+    }
+
+    #about-us {
+        background-color: white;
+        width: 60%;
+        padding: 5px 130px 50px;
+        border-radius: 5px;
+        text-align: center;
+        margin: 20px auto 50px;
+    }
+
+    /*Section Guaranteed*/
+
+    #guaranteed .container {
+        display: flex;
+        justify-content: space-around;
+        width: 70%;
+        padding: 30px;
+    }
+    #guaranteed .container article h2 {
+        font-size: 1.8rem;
+        margin: 0;
+    }
+    #guaranteed .container article p {
+        font-size: 1.2rem;
+        margin: 0px;
+    }
+
+    /*Section Easiest*/
+
+    #easiest .container {
+
+        width: 70%;
+        padding: 50px;
+        margin: 0 auto;
+
+    }
+}
